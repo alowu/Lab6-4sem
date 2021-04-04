@@ -16,7 +16,7 @@ public class MainFrame extends JFrame {
     private static final int WIDTH = 1500;
     private static final int HEIGHT = 900;
     private int counter = 0;
-    private static final int AMOUNT_OF_BALLS = 10;
+    private static final int AMOUNT_OF_BALLS = 8;
 
     private JMenuItem pauseMenuItem;
     private JMenuItem resumeMenuItem;

@@ -112,7 +112,17 @@ public class Field extends JPanel {
                     ball2.setColor(new Color((float)Math.random(), (float)Math.random(),
                              (float)Math.random()));
 
-
+                    URL url = null;
+                    File file = new File("src/entity/sound.wav");
+                    if (file.canRead()) {
+                        try {
+                            url = file.toURI().toURL();
+                        } catch (MalformedURLException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    AudioClip clip = Applet.newAudioClip(url);
+                    clip.play();
 
 
                 }
