@@ -28,8 +28,8 @@ public class MainFrame extends JFrame {
         setSize(WIDTH, HEIGHT);
         Toolkit kit = Toolkit.getDefaultToolkit();
 
-        setLocation((kit.getScreenSize().width - WIDTH)/2,
-                    (kit.getScreenSize().height - HEIGHT)/2);
+        setLocation((kit.getScreenSize().width - WIDTH) / 2,
+                (kit.getScreenSize().height - HEIGHT) / 2);
 
         setExtendedState(MAXIMIZED_BOTH);
 
@@ -39,11 +39,11 @@ public class MainFrame extends JFrame {
 
         Action addBallAction = new AbstractAction("Добавить мяч") {
             public void actionPerformed(ActionEvent event) {
-                if(counter >= AMOUNT_OF_BALLS - 1) {
+                if (counter >= AMOUNT_OF_BALLS - 1) {
                     ballMenu.setEnabled(false);
                 }
 
-                if(counter < AMOUNT_OF_BALLS) {
+                if (counter < AMOUNT_OF_BALLS) {
                     field.addBall();
                     ++counter;
                 }
@@ -58,7 +58,7 @@ public class MainFrame extends JFrame {
         JMenu controlMenu = new JMenu("Управление");
         menuBar.add(controlMenu);
 
-        Action pauseAction = new AbstractAction("Приостановить движение"){
+        Action pauseAction = new AbstractAction("Приостановить движение") {
             public void actionPerformed(ActionEvent event) {
                 field.pause();
                 pauseMenuItem.setEnabled(false);
